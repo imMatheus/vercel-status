@@ -40,8 +40,8 @@ export default function Home() {
           status="operational"
           title="Dashboard"
           sections={[
-            { title: 'Dashboard', status: 'issue' },
-            { title: 'Support Center', status: 'issue' },
+            { title: 'Dashboard', status: 'operational' },
+            { title: 'Support Center', status: 'operational' },
           ]}
         />
         <StatusSection status="operational" title="Data Cache" />
