@@ -15,7 +15,7 @@ export const IntroBanner: React.FC = ({}) => {
           />
         ))}
       </div>
-      <div className="absolute pointer-events-none w-fit h-fit -top-2.5 -left-[10px]">
+      <div className="absolute pointer-events-none w-fit h-fit z-[2] -top-2.5 -left-[10px]">
         <div className="border-r border-r-gray-600 absolute w-2.5 h-5"></div>
         <div className="border-b border-b-gray-600 absolute w-5 h-2.5"></div>
       </div>
