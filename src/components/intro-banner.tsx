@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 
 export const IntroBanner: React.FC = ({}) => {
   return (
-    <div className="grid w-full relative h-40 grid-cols-12 grid-rows-2">
+    <div className="grid w-full mb-10 relative h-40 grid-cols-12 grid-rows-2">
       <div className="contents">
         {Array.from({ length: 12 }).map((_, index) => (
           <div

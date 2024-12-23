@@ -13,11 +13,9 @@ const status = Array(31)
 export default function Home() {
   return (
     <div className="max-w-5xl min-h-[calc(100vh-64px)] mx-auto border-border border-x">
-      <div className="mb-10">
-        <IntroBanner />
-      </div>
+      <IntroBanner />
 
-      <div className="space-y-4 pb-4">
+      <div className="space-y-4 pb-4 bg-background-200 relative">
         <StatusSection status="operational" title="API" />
         <StatusSection
           status="operational"
@@ -125,7 +123,7 @@ const StatusSection = ({
       <Accordion.Root className="border-b" type="single" collapsible>
         <Accordion.Item value="item-1" disabled={!sections}>
           <Accordion.Header>
-            <Accordion.Trigger className="flex py-6 px-4 text-left w-full justify-between [&[data-state=open]_svg]:rotate-180">
+            <Accordion.Trigger className="flex py-6 px-4 items-center text-left w-full justify-between [&[data-state=open]_svg]:rotate-180">
               <div>
                 <div className="flex items-center gap-2 h-10">
                   <Text size={24} className="mb-1">

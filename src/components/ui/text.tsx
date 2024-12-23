@@ -88,9 +88,11 @@ const Text: React.FC<TextProps> = ({
           : '[font-size:var(--text-size)] [font-weight:var(--text-weight)] [letter-spacing:var(--text-letter-spacing)] [line-height:var(--text-line-height)]',
         monospace && 'font-mono',
         align && '[text-align:var(--text-align)]',
-        truncate && typeof truncate === 'number'
-          ? 'line-clamp-[var(--text-clamp)]'
-          : 'truncate',
+        truncate
+          ? typeof truncate === 'number'
+            ? 'line-clamp-[var(--text-clamp)]'
+            : 'truncate'
+          : false,
         className
       )}
       style={style}

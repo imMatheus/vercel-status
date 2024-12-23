@@ -9,6 +9,7 @@ import { Button } from './ui/button'
 
 import { Mail, Phone, Slack, Code, MessageCircle, Rss } from 'lucide-react'
 import { Text } from './ui/text'
+import { Input } from './ui/input'
 
 export const SubscribeButton: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ export const SubscribeButton: React.FC = () => {
             <TabsTrigger value="mail" className="pr-1">
               <Mail className="w-4 h-4 block mx-2" />
             </TabsTrigger>
-            <TabsTrigger value="phone" className="pr-1">
+            {/* <TabsTrigger value="phone" className="pr-1">
               <Phone className="w-4 h-4 block mx-2" />
             </TabsTrigger>
             <TabsTrigger value="slack" className="pr-1">
@@ -30,7 +31,7 @@ export const SubscribeButton: React.FC = () => {
             </TabsTrigger>
             <TabsTrigger value="code" className="pr-1">
               <Code className="w-4 h-4 block mx-2" />
-            </TabsTrigger>
+            </TabsTrigger> */}
             <TabsTrigger value="message" className="pr-1">
               <MessageCircle className="w-4 h-4 block mx-2" />
             </TabsTrigger>
@@ -38,10 +39,24 @@ export const SubscribeButton: React.FC = () => {
               <Rss className="w-4 h-4 block mx-2" />
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="mail">mail</TabsContent>
-          <TabsContent value="phone">phone</TabsContent>
+          <TabsContent value="mail">
+            <Text className="mb-3">
+              Get email notifications whenever Vercel{' '}
+              <span className="font-semibold">creates, updates</span> or{' '}
+              <span className="font-semibold">resolves</span> an incident.
+            </Text>
+
+            <Input placeholder="" className="mb-3" label="Email address" />
+
+            <Text size={10} color="gray-600">
+              By subscribing you agree to our Privacy Policy. This site is
+              protected by reCAPTCHA and the Google Privacy Policy and Terms of
+              Service apply.
+            </Text>
+          </TabsContent>
+          {/* <TabsContent value="phone">phone</TabsContent>
           <TabsContent value="slack">slack</TabsContent>
-          <TabsContent value="code">code</TabsContent>
+          <TabsContent value="code">code</TabsContent> */}
           <TabsContent value="message">
             <Text>
               Visit our{' '}
